@@ -1,7 +1,6 @@
 """
 值属性的查询
 """
-import json
 
 """
 {
@@ -105,13 +104,27 @@ data = \
                 },
             ],
         'targets':
-            {
-                'target_type': 'node',
-                'node_id': 4
-            }
-
+            [
+                {
+                    'target_type': 'node',
+                    'node_id': 4
+                }
+            ],
+        'steps':
+            [
+                {'current_target_node_id': 1,
+                 'related_links_id': None},
+                {'current_target_node_id': 2,
+                 'related_links_id': None},
+                {'current_target_node_id': 0,
+                 'related_links_id': [0, 1]},
+                {'current_target_node_id': 3,
+                 'related_links_id': None},  # 0->1  0->2
+                {'current_target_node_id': 4,
+                 'related_links_id': [3, 4]}  # 0->4  4->3
+            ]
     }
 
 # pprint(data)
-t = json.dumps(data, indent=4)
-print(t)
+# t = json.dumps(data, indent=4)
+# print(t)

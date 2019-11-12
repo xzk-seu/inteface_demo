@@ -47,14 +47,23 @@ data = {
             }
         ],
     'targets':
-        {
-            'target_type': 'node_property',
-            'node': 1,
-            'property': 'birthday'
-        }
+        [
+            {
+                'target_type': 'node_property',
+                'node': 1,
+                'property': 'birthday'
+            }
+        ],
+    'steps':
+        [
+            {'current_target_node_id': 0,
+             'related_links_id': None},
+            {'current_target_node_id': 1,
+             'related_links_id': [0]}
+        ]
 
 }
 
 # pprint(data)
-t = json.dumps(data, indent=4)
-print(t)
+# t = json.dumps(data, indent=4)
+# print(t)

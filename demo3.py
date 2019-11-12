@@ -46,8 +46,17 @@ data = {
             }
         ],
     'targets':
-        {
-            'target_type': 'node',
-            'node_id': 1
-        }
+        [
+            {
+                'target_type': 'node',
+                'node_id': 1
+            }
+        ],
+    'steps':
+        [
+            {'current_target_node_id': 0,
+             'related_links_id': None},
+            {'current_target_node_id': 1,
+             'related_links_id': [0]}
+        ]
 }

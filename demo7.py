@@ -58,8 +58,20 @@ data = \
                 }
             ],
         'targets':
-            {
-                'target_type': 'node',
-                'node_id': 2
-            }
+            [
+                {
+                    'target_type': 'node',
+                    'node_id': 2
+                }
+            ],
+        'steps':  # 对待查边两边的节点进行广度优先遍历
+            [
+                {'current_target_node_id': 0,
+                 'related_links_id': None},
+                {'current_target_node_id': 1,
+                 'related_links_id': [0]},
+                {'current_target_node_id': 2,
+                 'related_links_id': [1]}
+            ]
+
     }

@@ -60,9 +60,19 @@ data = \
                 }
             ],
         'targets':
-            {
-                'target_type': 'link_property',
-                'link_id': 0,
-                'property': 'train_number'
-            }
+            [
+                {
+                    'target_type': 'link_property',
+                    'link_id': 0,
+                    'property': 'train_number'
+                }
+            ],
+        'steps':  # 对待查边两边的节点进行广度优先遍历
+            [
+                {'current_target_node_id': 0,
+                 'related_links_id': None},
+                {'current_target_node_id': 1,
+                 'related_links_id': None}
+            ]
+
     }
